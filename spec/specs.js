@@ -26,4 +26,8 @@ describe('titleCase', function() {
     it("capitalizes 'the' at the first position in a sentence", function() {
         expect(titleCase("thE CAT")).to.equal("The Cat");
     });
+
+    it("does not capitalize words that are acceptions in title case, unless it is at the beginning", function() {
+        expect(titleCase("the Little mermaid is and weird movie")).to.equal("The Little Mermaid is and Weird Movie");
+    });
 });
